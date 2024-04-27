@@ -30,7 +30,7 @@ export default function Header() {
                     </div>
                 </button>
 
-                <div className={!nav ? "fixed z-40 right-0 top-0 w-[40%] h-full border-r bg-custom-blue shadow-sm ease-in-out duratio-500" : "fixed left-[-100%]"}>
+                <div className={!nav ? "fixed z-40 right-0 top-0 lg:w-[40%]  sm:w-[50%] w-[80%]  h-full border-r bg-custom-blue shadow-sm ease-in-out duratio-500" : "fixed left-[-100%]"}>
                     <div className="flex justify-between items-center p-4">
                         <h1 className="text-white text-2xl font-semibold">
                             Carrinho <br /> de compras
