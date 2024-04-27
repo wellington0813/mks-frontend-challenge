@@ -10,7 +10,7 @@ export default function Header() {
     const handleNav = () => setNav(!nav);
 
     const addToCart = (product) => {
-        setCartItems(prevCartItems => [...cartItems, product]);
+        setCartItems(prevCartItems => [...prevCartItems, product]);
         console.log("Cart items:", cartItems);
     }
     return (
@@ -58,7 +58,6 @@ export default function Header() {
                                             </div>
                                         </div>
                                     </div>
-
                                     <button  onClick={() => setCartItems(cartItems.filter((_, i) => i !== index))}
                                         className="bg-black absolute -top-2 -right-2 rounded-full p-1 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
                                     >

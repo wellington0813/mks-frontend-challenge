@@ -18,10 +18,10 @@ const addToCart = (product, setCartItems) => {
   console.log("Product added to cart:", product);
 }
 
-export function Hero() {
+export function Hero({ addToCart }) {
   const [loading, setLoading] = useState(true);
   const [dadosPrudutos, setDadosProdutos] = useState({});
-  const [cartItems, setCartItems] = useState({});
+  const [cartItems, setCartItems] = useState([]);
   const { products } = dadosPrudutos;
 
   useEffect(() => {
@@ -78,5 +78,11 @@ export function Hero() {
 }
 
 export default function ClientHero() {
-  return <Hero />;
+  const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (product) => {
+    setCartItems(prevCartItems => [...prevCartItems, product]);
+  }
+
+  return <Hero addToCart={addToCart} />;
 }
